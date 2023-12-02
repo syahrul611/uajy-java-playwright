@@ -43,6 +43,16 @@ public class JavaHelpers {
     }
 
     /**
+     * extract number from string given
+     * @param word is the String that we want to extract
+     *             Example : "Rp. 13.000 / bulan" > 13000
+     */
+    public static int extractNumber(String word) {
+        String str = word.replaceAll("[A-Z a-z . / : , ' ; ( ) -]", "").trim();
+        return Integer.parseInt(str);
+    }
+
+    /**
      * Get screen height
      * @return screen height int type
      */

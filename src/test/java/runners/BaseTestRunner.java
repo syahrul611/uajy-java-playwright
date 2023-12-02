@@ -23,11 +23,9 @@ public class BaseTestRunner extends AbstractTestNGCucumberTests {
     public void beforeTest(String browserName) {
         BrowserInitialize browserInitialize = new BrowserInitialize();
         this.browserName = browserName.isBlank() || browserName.isEmpty() ? GlobalConfig.BROWSER_NAME : browserName;
-        System.out.println("Browser Name: " + this.browserName);
         PlaywrightSourceManager.setLocalPlaywright(Playwright.create());
-        System.out.println("Im here");
         PlaywrightSourceManager.setLocalBrowser(browserInitialize.getBrowser(this.browserName, BrowserOptions.launchOptions()));
-        System.out.println("Im here last line before test");
+        System.out.println("Playwright is using " + this.browserName + " browser");
     }
 
     @Parameters({"squadName"})
