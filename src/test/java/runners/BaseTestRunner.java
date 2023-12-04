@@ -20,7 +20,7 @@ public class BaseTestRunner extends AbstractTestNGCucumberTests {
 
     @Parameters({"browserName"})
     @BeforeTest(alwaysRun = true)
-    public void beforeTest(String browserName) {
+    public void beforeTest(@Optional("chrome") String browserName) {
         BrowserInitialize browserInitialize = new BrowserInitialize();
         this.browserName = browserName.isBlank() || browserName.isEmpty() ? GlobalConfig.BROWSER_NAME : browserName;
         PlaywrightSourceManager.setLocalPlaywright(Playwright.create());
@@ -30,7 +30,7 @@ public class BaseTestRunner extends AbstractTestNGCucumberTests {
 
     @Parameters({"squadName"})
     @AfterTest(alwaysRun = true)
-    public void afterTest(String squadName) throws CluecumberException {
+    public void afterTest(@Optional("uajy") String squadName) throws CluecumberException {
         String jsonDirectory = "target/result/" + squadName;
         String reportDirectory = "target/result/" + squadName + "/cluecumber_report";
         PlaywrightSourceManager.getLocalBrowser().close();
