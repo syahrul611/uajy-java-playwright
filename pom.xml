@@ -11,63 +11,74 @@
   <properties>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
+    <com.microsoft.playwright.version>1.39.0</com.microsoft.playwright.version>
+    <org.testng.version>7.8.0</org.testng.version>
+    <io.cucumber.version>7.11.1</io.cucumber.version>
+    <io.cucumber-testng.version>7.11.1</io.cucumber-testng.version>
+    <io.cucumber-core.version>7.11.1</io.cucumber-core.version>
+    <org.projectlombok.version>1.18.30</org.projectlombok.version>
+    <org.apache.commons-lang3.version>3.12.0</org.apache.commons-lang3.version>
+    <cluecumber-core.version>3.2.2</cluecumber-core.version>
+    <log4j-core.version>2.20.0</log4j-core.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
+    <maven-surefire-plugin.version>3.0.0-M6</maven-surefire-plugin.version>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>com.microsoft.playwright</groupId>
       <artifactId>playwright</artifactId>
-      <version>1.39.0</version>
+      <version>${com.microsoft.playwright.version}</version>
     </dependency>
 
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
-      <version>7.8.0</version>
+      <version>${org.testng.version}</version>
       <scope>test</scope>
     </dependency>
 
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-java</artifactId>
-      <version>7.11.1</version>
+      <version>${io.cucumber.version}</version>
     </dependency>
 
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-testng</artifactId>
-      <version>7.11.1</version>
+      <version>${io.cucumber-testng.version}</version>
     </dependency>
 
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-core</artifactId>
-      <version>7.11.1</version>
+      <version>${io.cucumber-core.version}</version>
     </dependency>
 
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
-      <version>3.12.0</version>
+      <version>${org.apache.commons-lang3.version}</version>
     </dependency>
 
     <dependency>
       <groupId>com.trivago.rta</groupId>
       <artifactId>cluecumber-core</artifactId>
-      <version>3.2.2</version>
+      <version>${cluecumber-core.version}</version>
     </dependency>
 
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-core</artifactId>
-      <version>2.20.0</version>
+      <version>${log4j-core.version}</version>
     </dependency>
 
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.30</version>
+      <version>${org.projectlombok.version}</version>
       <optional>true</optional>
       <scope>provided</scope>
     </dependency>
@@ -85,7 +96,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.10.1</version>
+        <version>${maven-compiler-plugin.version}</version>
         <configuration>
           <source>${maven.compiler.source}</source>
           <target>${maven.compiler.target}</target>
@@ -95,7 +106,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M6</version>
+        <version>${maven-surefire-plugin.version}</version>
         <configuration>
           <suiteXmlFiles>
             <!--suppress UnresolvedMavenProperty -->
