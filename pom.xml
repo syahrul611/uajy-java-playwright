@@ -11,6 +11,7 @@
   <properties>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <com.microsoft.playwright.version>1.39.0</com.microsoft.playwright.version>
     <org.testng.version>7.8.0</org.testng.version>
     <io.cucumber.version>7.11.1</io.cucumber.version>
@@ -20,7 +21,6 @@
     <org.apache.commons-lang3.version>3.12.0</org.apache.commons-lang3.version>
     <cluecumber-core.version>3.2.2</cluecumber-core.version>
     <log4j-core.version>2.20.0</log4j-core.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
     <maven-surefire-plugin.version>3.0.0-M6</maven-surefire-plugin.version>
   </properties>
