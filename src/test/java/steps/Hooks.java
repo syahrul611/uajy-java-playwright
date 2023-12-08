@@ -42,6 +42,7 @@ public class Hooks {
                         .setPath(Paths.get("target/trace/" + scenario.getName().replace(" ", "-").toLowerCase() + "-trace.zip")));
             }
         }
+        ActiveContext.getActiveBrowserContext().close();
         System.out.println(scenario.getName() + " is finished");
     }
 }
